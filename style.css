@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+  --warna-satu: #f4eeff;
+  --warna-dua: #dcd6f7;
+  --warna-tiga: #a6b1e1;
+  --warna-empat: #424874;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--warna-empat);
+}
+
+header {
+  background-color: var(--warna-empat);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 7%;
+  border-bottom: var(--border);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+header .logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--warna-satu);
+}
+
+header nav a {
+  margin: 0 1rem;
+  font-size: 1.6rem;
+  color: var(--warna-satu);
+}
+
+header nav a:hover {
+  color: var(--warna-satu);
+  border-bottom: 0.1rem solid var(--warna-satu);
+  padding-bottom: 0.5rem;
+}
+
+header .icon {
+  background-image: url(images/icon-menu.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  position: relative;
+}
+
+.box-circle {
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  width: 50rem;
+  height: 50rem;
+  animation: putar 5s linear infinite;
+}
+@keyframes putar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: #7379a5;
+  border-radius: 100%;
+  margin: -2.5rem;
+}
+.circle:nth-child(1) {
+  top: 0;
+  left: 50%;
+}
+.circle:nth-child(2) {
+  top: 80%;
+  left: 90%;
+}
+.circle:nth-child(3) {
+  top: 80%;
+  right: 90%;
+}
+
+.home aside {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: url(images/buku.png) no-repeat;
+  background-size: 40%;
+  background-position: center;
+  background-position-x: 90%;
+  min-height: 100vh;
+  padding: 2rem 7%;
+}
+
+.home aside .content {
+  max-width: 60rem;
+}
+
+.home aside .content h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.home aside .content h4,
+.home aside .content h3 {
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 1.8;
+  padding: 1rem 0;
+  color: #eee;
+}
+
+.tombol {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  font-size: 1.7rem;
+  color: var(--warna-empat);
+  background: var(--warna-tiga);
+  cursor: pointer;
+  border-radius: 2rem;
+}
+
+.tombol:hover {
+  letter-spacing: 0.2rem;
+  color: #fff;
+}
+
+.tentang {
+  min-height: 100vh;
+  background: rgba(61, 67, 111);
+  padding: 10rem;
+}
+
+.tentang .article {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tentang .article .foto {
+  flex: 1 1 45rem;
+  overflow: hidden;
+}
+
+.tentang .article .foto .bg-foto1 {
+  background-color: #616793;
+  border-radius: 5%;
+  width: fit-content;
+  rotate: 20deg;
+  margin: auto;
+}
+
+.tentang .article .foto .bg-foto2 {
+  background-color: #6b719d;
+  border-radius: 5%;
+  width: fit-content;
+  rotate: -10deg;
+}
+
+.tentang .article .foto img {
+  background-color: #7379a5;
+  border-radius: 5%;
+  display: block;
+  margin: auto;
+  rotate: -10deg;
+  box-shadow: 0px 2px 20px #aaaaaa;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tentang .article .deskripsi {
+  flex: 1 1 45rem;
+  text-align: justify;
+  padding: 2rem;
+}
+
+.tentang .article .deskripsi h2 {
+  color: rgba(255, 255, 255, 1);
+  font-size: 6rem;
+  text-transform: capitalize;
+  margin-top: 4.5rem;
+  margin-bottom: 2rem;
+}
+
+.tentang .article .deskripsi h5 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  margin-bottom: 2.5rem;
+}
+
+.tentang .article .deskripsi p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  line-height: 2.8rem;
+  margin-bottom: 4.5rem;
+}
+
+.skill {
+  background: var(--warna-empat);
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 15rem;
+}
+
+.title h1 {
+  color: white;
+  font-size: 6rem;
+  margin: 5rem auto;
+  text-align: center;
+}
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .logo {
+  background-color: #616793;
+  border-radius: 5rem;
+  padding: 2rem;
+  margin: 0 2rem;
+  box-shadow: 5px 5px 10px #aaaaaa;
+}
+.box .logo:hover {
+  background-color: #7379a5;
+  box-shadow: 5px 5px 10px white;
+}
+.box .logo img {
+  width: 20rem;
+}
+.box .logo:nth-child(2) img {
+  height: 30rem;
+  width: 25rem;
+}
+
+.kontak {
+  background: rgba(61, 67, 111);
+  max-height: 45rem;
+  padding: 10rem;
+  padding-bottom: 38rem;
+}
+
+.kontak aside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kontak aside p {
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+
+.sosmed {
+  display: flex;
+  padding: 0 12rem;
+  border-top: 4px solid white;
+}
+
+.sosmed a {
+  width: 8rem;
+  height: 8rem;
+  margin: 5rem;
+}
+
+.sosmed div {
+  width: 100%;
+  height: 100%;
+  background-color: #f9004d;
+  border-radius: 50%;
+  background-size: 5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sosmed div:hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+  background-color: white;
+}
+
+.sosmed .facebook {
+  background-image: url(icon/facebook-before.png);
+}
+.sosmed .facebook:hover {
+  background-image: url(icon/facebook-after.png);
+}
+
+.sosmed .instagram {
+  background-image: url(icon/instagram-before.png);
+}
+.sosmed .instagram:hover {
+  background-image: url(icon/instagram-after.png);
+}
+
+.sosmed .twitter {
+  background-image: url(icon/twitter-before.png);
+}
+.sosmed .twitter:hover {
+  background-image: url(icon/twitter-after.png);
+}
+
+.footer {
+  min-height: 8rem;
+  background: rgba(46, 52, 96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  font-size: 2rem;
+  color: white;
+}
+
+/* animasi bergerak ke atas */
+
+.animate {
+  opacity: 0;
+  transform: translateY(10rem);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.animate.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* media queri */
+@media (max-width: 990px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    padding: 1.5rem 2rem;
+  }
+
+  .home aside {
+    padding: 2rem;
+  }
+
+  .tentang {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .tentang .article .foto .bg-foto1 {
+    scale: 0.8;
+    margin: auto;
+  }
+
+  .box-circle {
+    scale: 0.8;
+    top: 20%;
+    right: 1%;
+  }
+
+  .title h1 {
+    font-size: 6rem;
+  }
+
+  .skill {
+    padding-bottom: 5rem;
+  }
+  .box {
+    display: block;
+  }
+  .box .logo {
+    border-radius: 5rem;
+    padding: 2rem;
+    margin: auto;
+    margin-bottom: 5rem;
+    width: 30rem;
+    height: 40rem;
+    overflow: hidden;
+  }
+  .box .logo img {
+    width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+  .box .logo:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  header .icon {
+    display: inline-block;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: var(--warna-tiga);
+    width: 30rem;
+    height: calc(100vh - 10rem);
+  }
+
+  /* header nav.active harus gabung titiknya gaboleh dispasi */
+  header nav.active {
+    right: 0;
+  }
+
+  header nav a {
+    color: var(--warna-empat);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  header nav a:hover {
+    color: var(--warna-satu);
+    border-bottom: 0.1rem solid var(--warna-satu);
+  }
+
+  .home aside {
+    justify-content: center;
+    text-align: center;
+    background-position-y: 75%;
+    background-position-x: 50%;
+    padding-bottom: 30rem;
+  }
+  .home aside .content h1 {
+    font-size: 4.5rem;
+  }
+  .home aside .content h4,
+  .home aside .content h3 {
+    font-size: 2rem;
+  }
+
+  .tentang {
+    padding: 0rem;
+    padding-bottom: 5rem;
+  }
+
+  .tentang .article .foto .bg-foto1 {
+    scale: 0.8;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: -2rem;
+  }
+
+  .box-circle {
+    scale: 0.7;
+    top: 40%;
+    right: 10%;
+  }
+
+  .sosmed {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .tentang .article .foto .bg-foto1 {
+    margin: auto;
+    scale: 0.6;
+    margin-bottom: -6rem;
+  }
+
+  .box-circle {
+    scale: 0.5;
+    top: 40%;
+    right: -10%;
+  }
+
+  .sosmed a {
+    margin: 5rem 2rem;
+  }
+
+  .kontak {
+    padding: 10rem 0;
+  }
+}
